@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import NavTabs from './Navbar';
-import Home from './pages/Home';
+import Resume from './pages/Resume';
 import About from './pages/About';
-import Blog from './pages/Blog';
+import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 export default function Project() {
@@ -10,14 +10,14 @@ export default function Project() {
 
     // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
     const renderPage = () => {
-        if (currentPage === 'Home') {
-            return <Home />;
+        if (currentPage === 'Resume') {
+            return <Resume />;
         }
         if (currentPage === 'About') {
             return <About />;
         }
-        if (currentPage === 'Blog') {
-            return <Blog />;
+        if (currentPage === 'Portfolio') {
+            return <Portfolio />;
         }
         return <Contact />;
     };
